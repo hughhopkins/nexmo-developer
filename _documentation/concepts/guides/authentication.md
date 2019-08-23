@@ -141,6 +141,8 @@ An example of generating a JWT for a Client SDK application is as follows:
 nexmo jwt:generate ./private.key sub=MY_USER_NAME exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=MY_APP_ID
 ```
 
+More examples of generating JWTs with ACLs can be found in the [Nexmo documentation](/conversation/guides/jwt-acl).
+
 Further information on the Nexmo CLI can be found in its [repository on GitHub](https://github.com/Nexmo/nexmo-cli).
 
 ## References
