@@ -125,19 +125,19 @@ If you are not using a Nexmo library you should refer to [RFC 7519](https://tool
 
 The Nexmo CLI is one way of creating a JWT. The general syntax is:
 
-```
+``` shell
 nexmo jwt:generate [options] <private_key> [claim=value...]
 ```
 
 An example of generating a JWT for a Voice API application is as follows:
 
-```
+``` shell
 nexmo jwt:generate path/to/private.key application_id=asdasdas-asdd-2344-2344-asdasdasd345
 ```
 
 An example of generating a JWT for a Client SDK application is as follows:
 
-```
+``` shell
 nexmo jwt:generate ./private.key sub=MY_USER_NAME exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=MY_APP_ID
 ```
 
